@@ -42,6 +42,30 @@ project "GLFW"
 			"_GLFW_X11"
 		}
 
+	filter "system:darwin"
+		systemversion "latest"
+		staticruntime "On"
+		links { "Cocoa" }
+		files {
+			"src/cocoa_init.m",
+			"src/cocoa_joystick.h",
+			"src/cocoa_joystick.m",
+			"src/cocoa_monitor.m",
+			"src/cocoa_platform.h",
+			"src/cocoa_time.c",
+			"src/cocoa_window.m",
+			"src/egl_context.c",
+			"src/osmesa_context.c",
+			"src/nsgl_context.h",
+			"src/nsgl_context.m",
+			"src/posix_thread.h",
+			"src/posix_thread.c"
+		}		
+		defines {
+			"_GLFW_COCOA",
+			"_CRT_SECURE_NO_WARNINGS"
+		}
+
 	filter "system:windows"
 		systemversion "latest"
 		staticruntime "On"
