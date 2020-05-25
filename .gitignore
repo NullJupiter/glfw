@@ -22,6 +22,12 @@ RelWithDebInfo
 GLFW.build
 GLFW.xcodeproj
 
+## Custom
+**.xcworkspace
+**.xcodeproj
+bin/
+bin-int/
+
 # macOS clutter
 .DS_Store
 
